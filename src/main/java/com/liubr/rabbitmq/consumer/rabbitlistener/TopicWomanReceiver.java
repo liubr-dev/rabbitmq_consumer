@@ -18,10 +18,10 @@ import java.util.Map;
 @Slf4j
 @Component
 @RabbitListener(queues = "topic.woman")
-public class TopicTotalReceiver {
+public class TopicWomanReceiver {
 
     @RabbitHandler
     public void process(Map testMessage) {
-        log.info("TopicTotalReceiver消费者收到消息  : " + testMessage.toString());
+        System.out.println("TopicTotalReceiver消费者收到消息  : " + testMessage.toString());
     }
 }
